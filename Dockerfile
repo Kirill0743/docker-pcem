@@ -2,7 +2,7 @@
 
 FROM ubuntu
 
-RUN apt-get update && apt-get install -y x11vnc xvfb firefox mesa-demos
+RUN apt-get update && apt-get install -y x11vnc xvfb firefox mesa-utils 
 RUN mkdir ~/.vnc
 RUN bash -c 'touch /start'
 RUN bash -c 'chmod 755 /start'
