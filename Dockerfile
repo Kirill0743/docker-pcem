@@ -1,6 +1,4 @@
 # Yes, i'm testing with firefox
-#
-# VERSION               0.3
 
 FROM ubuntu
 
