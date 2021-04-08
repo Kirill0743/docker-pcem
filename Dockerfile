@@ -7,10 +7,10 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update && apt-get install -y x11vnc xvfb firefox mesa-utils jwm xterm pcmanfm curl
 RUN mkdir ~/.vnc
 RUN mkdir ~/pcem
-RUN curl -o "~/pcem/pcem.tar.gz" "https://www.pcem-emulator.co.uk/files/PCemV17Linux.tar.gz"
 RUN bash -c 'touch /start'
 RUN bash -c 'chmod 755 /start'
 RUN bash -c 'echo "cd ~/pcem" >> /start'
+RUN bash -c 'echo "curl -o pcem.tar.gz https://www.pcem-emulator.co.uk/files/PCemV17Linux.tar.gz" >> /start'
 RUN bash -c 'echo "tar -xvf pcem.tar.gz" >> /start'
 RUN bash -c 'echo "export DISPLAY=:0" >> /start'
 RUN bash -c 'echo "Xvfb :0 -screen 0 1280x1024x24&" >> /start'
