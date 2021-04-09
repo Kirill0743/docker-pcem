@@ -4,3 +4,4 @@ jwm&
 firefox&
 pcmanfm&
 x11vnc -rfbport 5900
+pkill Xvfb
